@@ -25,17 +25,20 @@ def main(
         lines = list(f)
 
     # split train/val/test set with given ratio
+    # stratify by label and shuffle
     X_val_train, X_test = train_test_split(
         lines,
         test_size=test_size,
-        shuffle=False,
-        random_state=42
+        shuffle=True,
+        stratify=[i.split()[0] for i in lines],
+        random_state=42,
     )
     X_train, X_val = train_test_split(
         X_val_train,
         test_size=val_size*(1+test_size),
         shuffle=True,
-        random_state=42
+        stratify=[i.split()[0] for i in X_val_train],
+        random_state=42,
     )
 
     # save to the given files
