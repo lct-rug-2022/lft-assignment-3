@@ -1,6 +1,7 @@
 """Dataset train/test split script"""
 
 from pathlib import Path
+from collections import Counter
 
 import typer
 from sklearn.model_selection import train_test_split
@@ -42,9 +43,16 @@ def main(
     )
 
     # save to the given files
-    for file, data in [(train_file, X_test), (val_file, X_val), (test_file, X_test)]:
+    for file, data in [(train_file, X_train), (val_file, X_val), (test_file, X_test)]:
         with open(file, 'w', encoding='utf-8') as f:
             f.write(''.join(data))
+
+        # print stats
+        counter = Counter([i.split()[0] for i in data])
+        print(f'{file}:')
+        for name, num in counter.items():
+            print(f'  {name}: {num}')
+        print(f'  total: {len(data)}')
 
 
 if __name__ == "__main__":
