@@ -21,7 +21,7 @@ Split default dataset (`datasets` folder `reviews.txt` file) with 0.7/0.15/0.15 
 python dataset_split.py
 ```
 
-For more information please refer to the script help
+For more information and additional parameters please refer to the script help
 ```shell
 python dataset_split.py --help
 ```
@@ -34,7 +34,7 @@ Model with default dataset (`datasets` folder `train.txt` and `val.txt` files)
 python train.py
 ```
 
-For more information please refer to the script help
+For more information and additional parameters please refer to the script help
 ```shell
 python train.py --help
 ```
@@ -47,7 +47,7 @@ Test trained model with default dataset (`datasets` folder `test.txt` files) and
 python test.py
 ```
 
-For more information please refer to the script help
+For more information and additional parameters please refer to the script help
 ```shell
 python test.py --help
 ```
