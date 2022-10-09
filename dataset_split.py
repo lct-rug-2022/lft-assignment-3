@@ -66,5 +66,5 @@ def main(
         print(f'  total: {len(data)}')
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     app()
