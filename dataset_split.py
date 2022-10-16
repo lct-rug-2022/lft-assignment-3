@@ -1,7 +1,6 @@
 """Dataset train/test split script"""
 
 from pathlib import Path
-from collections import Counter
 
 import pandas as pd
 import typer

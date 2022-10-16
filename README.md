@@ -1,8 +1,6 @@
 # Learning From Data Assignment 3: TBA
 
 
-
-
 ### Installation 
 
 Note: python 3.10 is required
@@ -29,9 +27,16 @@ python dataset_split.py --help
 The split dataset used for our experiments is uploaded to the git and can be found in `datasets` folder. 
 
 
+
+### Experiments
+
+Notebooks with experiments are available in `experiments` folder. 
+They are optimized to be used with collab and requre dataset files to be uploaded. 
+
+
 ### Training model from scratch 
 
-Model with default dataset (`datasets` folder `train.csv` and `val.csv` files)
+Model with default dataset (`datasets` folder `train.csv`, `val.csv` and `test.csv` files)
 ```shell
 python train.py
 ```
@@ -41,19 +46,19 @@ For more information and additional parameters please refer to the script help
 python train.py --help
 ```
 
-The best model we trained can be found in the `models` folder.
+The best model we trained can be found at [HuggingFace Model Hub](https://huggingface.co/k4black/distilbert-base-uncased-reviews-finetuned).
 
 
-### Testing trained model 
+### Predict with trained model 
 
-Test trained model with default dataset (`datasets` folder `test.csv` files) and default model (`models` folder `model` file)
+Download and run best model on provided dataset file (`datasets/test.csv` by default).
 ```shell
-python test.py
+python predict.py
 ```
 
 For more information and additional parameters please refer to the script help
 ```shell
-python test.py --help
+python predict.py --help
 ```
 
 
