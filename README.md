@@ -1,4 +1,4 @@
-# Learning From Data Assignment 3: TBA
+# Learning From Data Assignment 3: Multi-Class Classification for Text Reviews
 
 
 ### Installation 
