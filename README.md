@@ -36,7 +36,7 @@ They are optimized to be used with collab and requre dataset files to be uploade
 
 ### Training model from scratch 
 
-Model with default dataset (`datasets` folder `train.csv`, `val.csv` and `test.csv` files)
+Training best model with default dataset (`datasets` folder `train.csv`, `val.csv` and `test.csv` files)
 ```shell
 python train.py
 ```
